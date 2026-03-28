@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="50%" style="stop-color:#29b6f6"/>
+      <stop offset="100%" style="stop-color:#0288d1"/>
+    </linearGradient>
+    <linearGradient id="check" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66bb6a"/>
+      <stop offset="100%" style="stop-color:#43a047"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rectangle -->
+  <rect width="256" height="256" rx="32" ry="32" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="64" x2="256" y2="64"/>
+    <line x1="0" y1="128" x2="256" y2="128"/>
+    <line x1="0" y1="192" x2="256" y2="192"/>
+    <line x1="64" y1="0" x2="64" y2="256"/>
+    <line x1="128" y1="0" x2="128" y2="256"/>
+    <line x1="192" y1="0" x2="192" y2="256"/>
+  </g>
+
+  <!-- Shield shape (SonarQube style) -->
+  <path d="M128 30 L185 55 L185 120 C185 160 160 185 128 200 C96 185 71 160 71 120 L71 55 Z"
+        fill="url(#shield)" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Inner shield highlight -->
+  <path d="M128 42 L176 63 L176 118 C176 152 155 174 128 187 C101 174 80 152 80 118 L80 63 Z"
+        fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+
+  <!-- Checkmark inside shield -->
+  <path d="M105 110 L122 130 L155 90"
+        fill="none" stroke="url(#check)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#glow)"/>
+
+  <!-- Connection dots (MCP style) -->
+  <circle cx="55" cy="85" r="5" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="201" cy="85" r="5" fill="#7c3aed" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="55" cy="145" r="5" fill="#7c3aed" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="201" cy="145" r="5" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Connection lines to shield -->
+  <line x1="60" y1="85" x2="71" y2="85" stroke="url(#accent)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="185" y1="85" x2="196" y2="85" stroke="url(#accent)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="60" y1="145" x2="71" y2="138" stroke="url(#accent)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="185" y1="145" x2="196" y2="145" stroke="url(#accent)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- "SonarQube" text -->
+  <text x="128" y="222" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif"
+        font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle"
+        letter-spacing="1">SonarQube</text>
+
+  <!-- "MCP SERVER" text -->
+  <text x="128" y="242" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif"
+        font-size="12" font-weight="600" fill="url(#accent)" text-anchor="middle"
+        letter-spacing="3">MCP SERVER</text>
+</svg>

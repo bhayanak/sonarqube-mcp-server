@@ -1,0 +1,18 @@
+{
+  "component": {
+    "key": "com.company:backend",
+    "name": "Backend API",
+    "measures": [
+      { "metric": "ncloc", "value": "45230" },
+      { "metric": "coverage", "value": "78.5" },
+      { "metric": "duplicated_lines_density", "value": "3.2" },
+      { "metric": "sqale_index", "value": "2520" },
+      { "metric": "reliability_rating", "value": "1.0" },
+      { "metric": "security_rating", "value": "1.0" },
+      { "metric": "sqale_rating", "value": "2.0" },
+      { "metric": "bugs", "value": "4" },
+      { "metric": "vulnerabilities", "value": "2" },
+      { "metric": "code_smells", "value": "42" }
+    ]
+  }
+}

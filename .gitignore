@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.vsix
+.env
+.env.*
+coverage/
+.turbo/
+out/
+.vscode/
+*.md
+!README.md
+!deploy.md
+!CHANGE.md
+*.tgz
+!CHANGE.md

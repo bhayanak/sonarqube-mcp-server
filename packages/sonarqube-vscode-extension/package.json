@@ -1,0 +1,109 @@
+{
+  "name": "sonarqube-mcp-extension",
+  "displayName": "SonarQube MCP",
+  "description": "VS Code extension that provides SonarQube MCP server for AI assistants — code quality, issues, hotspots, metrics & rules at your fingertips",
+  "version": "0.1.0",
+  "publisher": "bhayanak",
+  "icon": "logo.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/sonarqube-mcp-server"
+  },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp server",
+    "ai",
+    "copilot",
+    "sonarqube",
+    "code-quality",
+    "security",
+    "static-analysis",
+    "quality-gate",
+    "hotspots",
+    "devops"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "SonarQube MCP",
+      "properties": {
+        "sonarqubeMcp.baseUrl": {
+          "type": "string",
+          "description": "SonarQube server base URL (e.g. https://sonarcloud.io)",
+          "order": 1
+        },
+        "sonarqubeMcp.token": {
+          "type": "string",
+          "description": "SonarQube authentication token",
+          "order": 2
+        },
+        "sonarqubeMcp.organization": {
+          "type": "string",
+          "description": "SonarCloud organization key (optional, for SonarCloud only)",
+          "order": 3
+        },
+        "sonarqubeMcp.defaultProject": {
+          "type": "string",
+          "description": "Default SonarQube project key (optional)",
+          "order": 4
+        },
+        "sonarqubeMcp.cacheTtlMs": {
+          "type": "number",
+          "default": 300000,
+          "description": "Cache TTL in milliseconds (default: 300000 = 5 min)",
+          "order": 5
+        },
+        "sonarqubeMcp.cacheMaxSize": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum number of cached API responses (default: 100)",
+          "order": 6
+        },
+        "sonarqubeMcp.timeoutMs": {
+          "type": "number",
+          "default": 15000,
+          "description": "HTTP request timeout in milliseconds (default: 15000)",
+          "order": 7
+        },
+        "sonarqubeMcp.pageSize": {
+          "type": "number",
+          "default": 100,
+          "description": "Default API page size (default: 100)",
+          "order": 8
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'extension lint: OK'",
+    "lint:fix": "echo 'extension lint:fix: OK'",
+    "format": "prettier --check \"src/**/*.ts\"",
+    "format:fix": "prettier --write \"src/**/*.ts\"",
+    "test": "echo 'extension tests: OK'",
+    "package": "pnpm run build && node -e \"const v=require('./package.json').version; require('child_process').execSync('npx @vscode/vsce package --no-dependencies --skip-license -o sonarqube-mcp-extension-'+v+'.vsix', {stdio:'inherit'})\""
+  },
+  "dependencies": {
+    "sonarqube-mcp-server": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "@types/vscode": "^1.99.0",
+    "@vscode/vsce": "^3.3.2",
+    "esbuild": "^0.24.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "total": 3,
+  "issues": [
+    {
+      "key": "AXn8G001",
+      "rule": "java:S2095",
+      "severity": "CRITICAL",
+      "component": "com.company:backend:src/main/java/DataService.java",
+      "project": "com.company:backend",
+      "line": 142,
+      "status": "OPEN",
+      "message": "Close this FileInputStream",
+      "effort": "15min",
+      "tags": ["cert", "cwe", "leak"],
+      "creationDate": "2024-12-10T10:00:00+0000",
+      "type": "BUG"
+    },
+    {
+      "key": "AXn8G002",
+      "rule": "java:S5344",
+      "severity": "CRITICAL",
+      "component": "com.company:backend:src/main/java/SecurityConfig.java",
+      "project": "com.company:backend",
+      "line": 28,
+      "status": "OPEN",
+      "message": "Remove this hard-coded password",
+      "effort": "30min",
+      "tags": ["cwe", "owasp-a07"],
+      "creationDate": "2024-12-08T12:00:00+0000",
+      "type": "VULNERABILITY"
+    },
+    {
+      "key": "AXn8G003",
+      "rule": "java:S1192",
+      "severity": "MAJOR",
+      "component": "com.company:backend:src/main/java/UserController.java",
+      "project": "com.company:backend",
+      "line": 55,
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal",
+      "effort": "5min",
+      "tags": [],
+      "creationDate": "2024-12-12T14:00:00+0000",
+      "type": "CODE_SMELL"
+    }
+  ],
+  "paging": { "pageIndex": 1, "pageSize": 25, "total": 3 }
+}

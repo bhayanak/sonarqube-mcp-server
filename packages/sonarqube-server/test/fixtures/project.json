@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "key": "com.company:backend",
+      "name": "Backend API",
+      "qualifier": "TRK",
+      "visibility": "public",
+      "lastAnalysisDate": "2024-12-14T08:30:00+0000",
+      "revision": "abc123",
+      "version": "3.2.1"
+    },
+    {
+      "key": "com.company:frontend",
+      "name": "Frontend App",
+      "qualifier": "TRK",
+      "visibility": "public",
+      "lastAnalysisDate": "2024-12-14T09:15:00+0000"
+    }
+  ],
+  "paging": { "pageIndex": 1, "pageSize": 25, "total": 2 }
+}
