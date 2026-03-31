@@ -9,7 +9,4 @@ out/
 .vscode/
 *.md
 !README.md
-!deploy.md
-!CHANGE.md
 *.tgz
-!CHANGE.md
