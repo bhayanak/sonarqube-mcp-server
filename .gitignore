@@ -10,3 +10,4 @@ out/
 *.md
 !README.md
 *.tgz
+.DS_Store
