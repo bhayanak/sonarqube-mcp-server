@@ -53,12 +53,6 @@ This extension registers a **SonarQube MCP server** directly in VS Code's MCP se
 3. Search for **"SonarQube MCP"**
 4. Click **Install**
 
-### From VSIX
-
-```bash
-code --install-extension sonarqube-mcp-extension-<version>.vsix
-```
-
 ---
 
 ## ⚙️ Configuration
@@ -85,45 +79,8 @@ Or add to `settings.json`:
   "sonarqubeMcp.organization": "my-org"
 }
 ```
-
----
-
-## 🚀 How It Works
-
-1. Extension activates on VS Code startup
-2. Registers an MCP server via `vscode.lm.registerMcpServerDefinitionProvider`
-3. VS Code shows **SonarQube MCP** in the MCP servers panel (under Extensions)
-4. VS Code manages the server lifecycle — start, stop, restart, show output
-5. Settings are passed as environment variables to the bundled MCP server
-
-> **Note**: Requires VS Code ≥ 1.99.0 for the `McpStdioServerDefinition` API.
-
----
-
-## 🏗️ Development
-
-```bash
-# From monorepo root
-pnpm install
-
-# Build extension + bundled server
-pnpm --filter sonarqube-mcp-extension run build
-
-# Type check
-pnpm --filter sonarqube-mcp-extension run typecheck
-
-# Package as VSIX
-pnpm --filter sonarqube-mcp-extension run package
-```
-
 ---
 
 ## 📄 License
 
 [MIT](../../LICENSE) © bhayanak
-
-## Commands
-
-- `SonarQube MCP: Start` — Start the MCP server
-- `SonarQube MCP: Stop` — Stop the MCP server
-- `SonarQube MCP: Status` — Check server status

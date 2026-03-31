@@ -90,39 +90,6 @@ sonarqube-mcp-server
 
 ---
 
-## 🏗️ Development
-
-```bash
-# Prerequisites: Node.js ≥ 18, pnpm ≥ 10
-
-# Clone & install
-git clone https://github.com/bhayanak/sonarqube-mcp-server.git
-cd sonarqube-mcp-server
-pnpm install
-
-# Build everything
-pnpm build
-
-# Run tests (85 tests, 92%+ coverage)
-pnpm test
-pnpm run test:coverage
-
-# Lint, format, type check
-pnpm lint
-pnpm format
-pnpm typecheck
-
-# Package both components
-pnpm run package
-# → packages/sonarqube-server/sonarqube-mcp-server-<version>.tgz
-# → packages/sonarqube-vscode-extension/sonarqube-mcp-extension-<version>.vsix
-
-# Full CI pipeline
-pnpm run ci
-```
-
----
-
 ## 📄 License
 
 [MIT](LICENSE) © bhayanak

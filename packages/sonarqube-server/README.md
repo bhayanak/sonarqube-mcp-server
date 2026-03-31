@@ -103,33 +103,6 @@ Add to your MCP client config (e.g. Claude Desktop, Cursor):
 
 ---
 
-## 🏗️ Development
-
-```bash
-# Install dependencies
-pnpm install
-
-# Run in development mode
-pnpm dev
-
-# Run tests
-pnpm test
-
-# Run tests with coverage
-pnpm test:coverage
-
-# Type check
-pnpm typecheck
-
-# Lint
-pnpm lint
-
-# Build
-pnpm build
-```
-
----
-
 ## 📄 License
 
 [MIT](../../LICENSE) © bhayanak

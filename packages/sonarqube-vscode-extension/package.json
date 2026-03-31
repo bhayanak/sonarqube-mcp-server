@@ -35,6 +35,12 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "sonarqube-mcp",
+        "label": "SonarQube MCP"
+      }
+    ],
     "configuration": {
       "title": "SonarQube MCP",
       "properties": {
